@@ -104,7 +104,7 @@ print(student[3])
 
 #immutable nature or tuple
 student = ("hasini",18,"python")
-student[1]=22
+
 #this gives an error because tuple is not changable 
 
 #tuples are immutable
@@ -143,3 +143,62 @@ print(subjects)
 #set do not allow duplicate values
 numbers = {1,2,3,4,5,3,2,1}
 print(numbers)
+
+#dictionaries in python 
+#dictionary is a collection of key value pairs that are unordered and mutable.
+student = { "name": "hasini" , "marks" : 90 , "sub" : "python" , "age": 18 , "course": "AIML"}
+print(student.keys())
+print(student.values())
+print(student.items())
+
+#accessing elememts in dict
+print(student["name"])
+print(student["age"])
+print(student["course"])
+
+#change values in a dict
+student["age"] = 11
+print(student["age"])
+
+#add new data to a dict
+student["city"]="tirupathi"
+print(student)
+
+#remove data 
+student.pop("city")
+print(student)
+
+#get()returns the value of specified key
+print(student.get("name"))
+
+#update() updates the value of the specified key
+student.update({"age":18})
+
+#popitem()  removes the last inserted key-value pair
+student ={
+    "name": "hasini",
+    "age" :18,
+    "course": "python"
+}
+student.popitem()
+
+#setdefault
+student = {"name": "hasini"}
+student.setdefault("age",18)
+print(student)
+
+#clear method
+student.clear()
+print(student)
+
+#copy method
+student = {
+    "name":"hasini",
+    "age": 21
+}
+new_student = student.copy()
+print(new_student)
+
+#order of evaluation
+result = 2+13*2
+print(result)
